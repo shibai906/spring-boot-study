@@ -10,8 +10,10 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import redis.clients.jedis.params.sortedset.ZAddParams;
 
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 @RunWith(SpringRunner.class)
@@ -29,6 +31,37 @@ public class SpringbootApplicationTests {
     @Test
     public void testGet() throws Exception {
         System.out.println(redisClient.get("zhao"));
+    }
+
+    @Test
+    public void testSetBit() throws Exception {
+        redisClient.setBit("zhaohuan:100",100,true);
+    }
+
+    @Test
+    public void testSetBit1000() throws Exception {
+        redisClient.setBit("zhaohuan:100",1000 , false);
+    }
+
+    @Test
+    public void testGetBit() throws Exception {
+        System.out.println(redisClient.getBit("zhaohuan:100",1000));
+    }
+
+    @Test
+    public void testAddZset() throws Exception {
+//        ZAddParams params = new ZAddParams();
+        redisClient.zadd("zhao",100,"zhaohuan");
+        redisClient.zadd("zhao",200,"zhaojiaxin");
+        redisClient.zadd("zhao",150,"zhaoxiao");
+        redisClient.zadd("zhao",60,"yanxing");
+        redisClient.zadd("zhao",40,"xiongda");
+    }
+
+    @Test
+    public void testGetZset() throws Exception {
+        Set<String> set = redisClient.zreverange("zhao",0,-1);
+
     }
 
     @Test
