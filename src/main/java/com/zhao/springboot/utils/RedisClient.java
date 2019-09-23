@@ -6,6 +6,7 @@ import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 
 import javax.xml.ws.Action;
+import java.util.List;
 import java.util.Set;
 
 @Component
@@ -49,7 +50,7 @@ public class RedisClient {
         }
     }
 
-    public boolean getBit(String key , long id) throws Exception {
+    public Boolean getBit(String key , long id) throws Exception {
         Jedis jedis = null;
         try {
             jedis = jedisPool.getResource();
@@ -78,6 +79,17 @@ public class RedisClient {
         try {
             jedis = jedisPool.getResource();
             return jedis.get(key);
+        } finally {
+            // 返还给连接池
+            jedis.close();
+        }
+    }
+
+    public Set<String> zrangebyscore(String key,double min , double max) {
+        Jedis jedis = null ;
+        try {
+            jedis = jedisPool.getResource();
+            return jedis.zrangeByScore(key , min ,max);
         } finally {
             // 返还给连接池
             jedis.close();

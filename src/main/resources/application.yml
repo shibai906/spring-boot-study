@@ -24,6 +24,14 @@ spring:
     password: admin
     pool:
       enabled: false
+
+  # rabbitmq相关配置
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
 # redis 配置
 # REDIS (RedisProperties)
 # Redis数据库索引（默认为0）

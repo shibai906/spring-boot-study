@@ -183,6 +183,12 @@ public class RedisCacheConfig {
         return redisTemplate.opsForHash().get(key,hashKey);
     }
 
+    public boolean setBit(String key , long offset , boolean flag) {
+        return redisTemplate.opsForValue().setBit(key,offset,false);
+    }
 
+    public boolean getBit(String key , long offset ) {
+        return redisTemplate.opsForValue().getBit(key,offset);
+    }
 
 }
