@@ -24,13 +24,13 @@ import java.util.List;
 @RestController
 public class HelloController {
 
-    private final Logger logger = LoggerFactory.getLogger(HelloController.class);
+  /*  private final Logger logger = LoggerFactory.getLogger(HelloController.class);
 
     @Autowired
     TestService testService;
 
     @Autowired
-    Test1 test1;
+    Test1 test1;*/
 /*
     @Value("${name}")
     private String name;
@@ -59,6 +59,7 @@ public class HelloController {
         return "test me to";
     }
 */
+/*
 
     @RequestMapping(value = { "getAllTest" }, method = { RequestMethod.POST,RequestMethod.GET }, produces="application/json;charset=UTF-8")
     public Object getAllTest() {
@@ -117,5 +118,6 @@ public class HelloController {
         return JSONResult.success(jsonArray);
     }
 
+*/
 
 }

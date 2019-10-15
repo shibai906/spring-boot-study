@@ -14,11 +14,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController
-@RequestMapping("test")
+/*@RestController
+@RequestMapping("test")*/
 public class TestController {
 
-    private final Logger logger = LoggerFactory.getLogger(HelloController.class);
+   /* private final Logger logger = LoggerFactory.getLogger(HelloController.class);
 
     @Autowired
     com.zhao.springboot.utils.RedisCacheConfig RedisCacheConfig;
@@ -75,5 +75,5 @@ public class TestController {
         String value = (String) RedisCacheConfig.get(key);
         return JSONResult.success(value);
     }
-
+*/
 }

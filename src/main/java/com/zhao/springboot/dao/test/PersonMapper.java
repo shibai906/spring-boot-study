@@ -6,10 +6,10 @@ import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
-@Mapper
+//@Mapper
 public interface PersonMapper {
 
-    String tableName = "person" ;
+  /*  String tableName = "person" ;
 
     @Insert("insert into "+ tableName+"(pno,name,sex,age) value(#{ps.pno},#{ps.name},#{ps.sex},#{ps.age})")
     long insert(@Param("ps") Person person) ;
@@ -22,5 +22,5 @@ public interface PersonMapper {
 
     @Update("update " + tableName + " set pno=#{ps.pno},name=#{ps.name},sex=#{ps.sex},age=#{ps.age}")
     void update(@Param("ps")Person person);
-
+*/
 }

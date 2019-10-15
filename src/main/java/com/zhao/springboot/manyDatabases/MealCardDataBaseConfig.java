@@ -1,6 +1,7 @@
 package com.zhao.springboot.manyDatabases;
 
 import com.alibaba.druid.pool.DruidDataSource;
+import com.zhao.springboot.utils.CreateDatabaseUtils;
 import lombok.Data;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -23,7 +24,6 @@ import java.sql.SQLException;
 public class MealCardDataBaseConfig {
 
     static final String PACKAGE = "com.zhao.springboot.dao.mealCard" ;
-
     private String filters;
     private String url;
     private String username;
@@ -41,7 +41,6 @@ public class MealCardDataBaseConfig {
     private boolean testOnReturn;
     private boolean poolPreparedStatements;
     private int maxPoolPreparedStatementPerConnectionSize;
-
 
     @Primary
     @Bean(name = "meadlCardDataSource")
@@ -81,7 +80,6 @@ public class MealCardDataBaseConfig {
         // 打开PSCache时，指定每个连接上PSCache的大小
         druid.setMaxPoolPreparedStatementPerConnectionSize(maxPoolPreparedStatementPerConnectionSize);
 
-
         return druid;
     }
 
@@ -98,8 +96,6 @@ public class MealCardDataBaseConfig {
     public SqlSessionFactory meadlCardSqlSessionFactory(@Qualifier("meadlCardDataSource") DataSource primaryDataSource) throws Exception {
         final SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
         sessionFactory.setDataSource(primaryDataSource);  // 设置数据源bean
-//        sessionFactory.setMapperLocations(new PathMatchingResourcePatternResolver()
- //               .getResources(PrimaryDataBaseConfig.MAPPER_LOCATION));  // 设置mapper文件路径
 
         return sessionFactory.getObject();
     }

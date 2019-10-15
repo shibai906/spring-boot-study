@@ -1,7 +1,6 @@
 package com.zhao.springboot.manyDatabases;
 
 import com.alibaba.druid.pool.DruidDataSource;
-import com.zhao.springboot.utils.CreateDatabaseUtils;
 import lombok.Data;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -10,7 +9,6 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
 
@@ -19,11 +17,11 @@ import java.sql.SQLException;
 
 @Data
 @Configuration
-@ConfigurationProperties(prefix = "test1.datasource.druid")
-@MapperScan(basePackages = Test1DataBaseConfig.PACKAGE, sqlSessionFactoryRef = "test1SqlSessionFactory")
-public class Test1DataBaseConfig {
+@ConfigurationProperties(prefix = "test3.datasource.druid")
+@MapperScan(basePackages = LifeTimeDataBaseConfig.PACKAGE, sqlSessionFactoryRef = "lifeTimeSqlSessionFactory")
+public class LifeTimeDataBaseConfig {
 
-    static final String PACKAGE = "com.zhao.springboot.dao.test1" ;
+    static final String PACKAGE = "com.zhao.springboot.dao.lifeTime";
     private String filters;
     private String url;
     private String username;
@@ -42,10 +40,9 @@ public class Test1DataBaseConfig {
     private boolean poolPreparedStatements;
     private int maxPoolPreparedStatementPerConnectionSize;
 
-//    @Primary
-    @Bean(name = "test1DataSource")
-    @Qualifier("test1DataSource")
-    public DataSource test1DataSource() throws SQLException {
+    @Bean(name = "lifeTimeDataSource")
+    @Qualifier("lifeTimeDataSource")
+    public DataSource lifeTimeDataSource() throws SQLException {
         DruidDataSource druid = new DruidDataSource();
         // 监控统计拦截的filters
         druid.setFilters(filters);
@@ -84,26 +81,25 @@ public class Test1DataBaseConfig {
     }
 
     // 创建该数据源的事务管理
-    @Bean(name = "test1TransactionManager")
-    public DataSourceTransactionManager backTransactionManager() throws SQLException {
-        return new DataSourceTransactionManager(test1DataSource());
+    @Bean(name = "lifeTimeTransactionManager")
+    public DataSourceTransactionManager lifeTimeTransactionManager() throws SQLException {
+        return new DataSourceTransactionManager(lifeTimeDataSource());
     }
 
     // 创建Mybatis的连接会话工厂实例
-    @Bean(name = "test1SqlSessionFactory")
-    public SqlSessionFactory backSqlSessionFactory(@Qualifier("test1DataSource") DataSource backDataSource) throws Exception {
+    @Bean(name = "lifeTimeSqlSessionFactory")
+    public SqlSessionFactory lifeTimeSqlSessionFactory(@Qualifier("lifeTimeDataSource") DataSource primaryDataSource) throws Exception {
         final SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
-        sessionFactory.setDataSource(backDataSource);
+        sessionFactory.setDataSource(primaryDataSource);  // 设置数据源bean
 
         return sessionFactory.getObject();
     }
 
 
     // 配置事务，注意，异常必须抛出来，要不然事务不管用
-    @Bean(name="test1TransactionManager")
-    public PlatformTransactionManager test1TransactionManager(@Qualifier("testDataSource")DataSource prodDataSource) {
+    @Bean(name = "lifeTimeTransactionManager")
+    public PlatformTransactionManager lifeTimeTransactionManager(@Qualifier("lifeTimeDataSource") DataSource prodDataSource) {
         return new DataSourceTransactionManager(prodDataSource);
     }
-
 
 }

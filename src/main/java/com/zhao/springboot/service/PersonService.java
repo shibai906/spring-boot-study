@@ -11,7 +11,7 @@ import java.util.List;
 @Service
 public class PersonService {
 
-    @Autowired
+    /*@Autowired
     PersonMapper personMapper;
 
     @Transactional(value = "testTransactionManager" , rollbackFor=Exception.class)
@@ -35,5 +35,5 @@ public class PersonService {
 
     public void delete(long id) {
         personMapper.delete(id);
-    }
+    }*/
 }

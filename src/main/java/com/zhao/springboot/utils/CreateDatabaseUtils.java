@@ -1,29 +1,13 @@
-package com.zhao.springboot.manyDatabases;
+package com.zhao.springboot.utils;
 
 import com.alibaba.druid.pool.DruidDataSource;
-import com.zhao.springboot.utils.CreateDatabaseUtils;
 import lombok.Data;
-import org.apache.ibatis.session.SqlSessionFactory;
-import org.mybatis.spring.SqlSessionFactoryBean;
-import org.mybatis.spring.annotation.MapperScan;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
-import org.springframework.jdbc.datasource.DataSourceTransactionManager;
-import org.springframework.transaction.PlatformTransactionManager;
 
 import javax.sql.DataSource;
 import java.sql.SQLException;
 
 @Data
-@Configuration
-@ConfigurationProperties(prefix = "test1.datasource.druid")
-@MapperScan(basePackages = Test1DataBaseConfig.PACKAGE, sqlSessionFactoryRef = "test1SqlSessionFactory")
-public class Test1DataBaseConfig {
-
-    static final String PACKAGE = "com.zhao.springboot.dao.test1" ;
+public class CreateDatabaseUtils {
     private String filters;
     private String url;
     private String username;
@@ -42,20 +26,15 @@ public class Test1DataBaseConfig {
     private boolean poolPreparedStatements;
     private int maxPoolPreparedStatementPerConnectionSize;
 
-//    @Primary
-    @Bean(name = "test1DataSource")
-    @Qualifier("test1DataSource")
-    public DataSource test1DataSource() throws SQLException {
+    public DataSource meadlCardDataSource(String PACKAGE) throws SQLException {
         DruidDataSource druid = new DruidDataSource();
         // 监控统计拦截的filters
         druid.setFilters(filters);
-
         // 配置基本属性
         druid.setDriverClassName(driverClassName);
         druid.setUsername(username);
         druid.setPassword(password);
         druid.setUrl(url);
-
         //初始化时建立物理连接的个数
         druid.setInitialSize(initialSize);
         //最大连接池数量
@@ -79,31 +58,7 @@ public class Test1DataBaseConfig {
         druid.setPoolPreparedStatements(poolPreparedStatements);
         // 打开PSCache时，指定每个连接上PSCache的大小
         druid.setMaxPoolPreparedStatementPerConnectionSize(maxPoolPreparedStatementPerConnectionSize);
-
         return druid;
     }
-
-    // 创建该数据源的事务管理
-    @Bean(name = "test1TransactionManager")
-    public DataSourceTransactionManager backTransactionManager() throws SQLException {
-        return new DataSourceTransactionManager(test1DataSource());
-    }
-
-    // 创建Mybatis的连接会话工厂实例
-    @Bean(name = "test1SqlSessionFactory")
-    public SqlSessionFactory backSqlSessionFactory(@Qualifier("test1DataSource") DataSource backDataSource) throws Exception {
-        final SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
-        sessionFactory.setDataSource(backDataSource);
-
-        return sessionFactory.getObject();
-    }
-
-
-    // 配置事务，注意，异常必须抛出来，要不然事务不管用
-    @Bean(name="test1TransactionManager")
-    public PlatformTransactionManager test1TransactionManager(@Qualifier("testDataSource")DataSource prodDataSource) {
-        return new DataSourceTransactionManager(prodDataSource);
-    }
-
 
 }

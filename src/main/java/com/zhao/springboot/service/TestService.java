@@ -7,10 +7,10 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+//@Service
 public class TestService {
 
-    @Autowired
+   /* @Autowired
     TestMapper testMapper;
 
     public List<Test> getAllTest() {
@@ -28,5 +28,5 @@ public class TestService {
     public void delete(long id) {
         testMapper.delete(id);
     }
-
+*/
 }
