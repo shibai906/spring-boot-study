@@ -4,7 +4,7 @@ import org.springframework.jms.annotation.JmsListener;
 import org.springframework.jms.annotation.JmsListeners;
 import org.springframework.stereotype.Service;
 
-@Service
+//@Service
 public class Consumer {
 
     @JmsListener( destination =  "test.queue")

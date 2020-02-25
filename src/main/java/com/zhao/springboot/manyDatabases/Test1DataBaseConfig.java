@@ -17,10 +17,10 @@ import org.springframework.transaction.PlatformTransactionManager;
 import javax.sql.DataSource;
 import java.sql.SQLException;
 
-@Data
-@Configuration
-@ConfigurationProperties(prefix = "test1.datasource.druid")
-@MapperScan(basePackages = Test1DataBaseConfig.PACKAGE, sqlSessionFactoryRef = "test1SqlSessionFactory")
+//@Data
+//@Configuration
+//@ConfigurationProperties(prefix = "test1.datasource.druid")
+//@MapperScan(basePackages = Test1DataBaseConfig.PACKAGE, sqlSessionFactoryRef = "test1SqlSessionFactory")
 public class Test1DataBaseConfig {
 
     static final String PACKAGE = "com.zhao.springboot.dao.test1" ;

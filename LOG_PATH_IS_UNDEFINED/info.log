@@ -1,0 +1,270 @@
+2019-12-09 00:06:23.472 [restartedMain] INFO  c.z.s.ansyc.SpringbootApplication -Starting SpringbootApplication on zhaohuandeMacBook-Pro.local with PID 18396 (/Users/zhaohuan/webapp/spring-boot-study/target/classes started by zhaohuan in /Users/zhaohuan/webapp/spring-boot-study)
+2019-12-09 00:06:23.476 [restartedMain] INFO  c.z.s.ansyc.SpringbootApplication -No active profile set, falling back to default profiles: default
+2019-12-09 00:06:23.640 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor -Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-09 00:06:23.641 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor -For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-09 00:06:24.091 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner -No MyBatis mapper was found in '[com.zhao.springboot.ansyc]' package. Please check your configuration.
+2019-12-09 00:06:24.141 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-09 00:06:24.141 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-09 00:06:24.152 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 5ms. Found 0 repository interfaces.
+2019-12-09 00:06:24.163 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-09 00:06:24.164 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-09 00:06:24.174 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 1ms. Found 0 repository interfaces.
+2019-12-09 00:06:24.534 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$202b634c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-09 00:06:24.588 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$59bfa51e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-09 00:06:24.928 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat initialized with port(s): 8085 (http)
+2019-12-09 00:06:24.940 [restartedMain] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+2019-12-09 00:06:24.941 [restartedMain] INFO  o.a.catalina.core.StandardEngine -Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-12-09 00:06:24.945 [restartedMain] INFO  o.a.c.core.AprLifecycleListener -The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/zhaohuan/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-12-09 00:06:25.110 [restartedMain] INFO  org.apache.jasper.servlet.TldScanner -At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-12-09 00:06:25.112 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2019-12-09 00:06:25.112 [restartedMain] INFO  o.s.web.context.ContextLoader -Root WebApplicationContext: initialization completed in 1471 ms
+2019-12-09 00:06:25.207 [restartedMain] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure -Init DruidDataSource
+2019-12-09 00:06:25.308 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext -Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/DruidDataSourceAutoConfigure.class]: Invocation of init method failed; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2019-12-09 00:06:25.319 [restartedMain] INFO  o.a.catalina.core.StandardService -Stopping service [Tomcat]
+2019-12-09 00:06:25.333 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener -
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-09 00:06:25.337 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter -
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2019-12-09 00:06:46.797 [restartedMain] INFO  c.z.s.ansyc.SpringbootApplication -Starting SpringbootApplication on zhaohuandeMacBook-Pro.local with PID 18413 (/Users/zhaohuan/webapp/spring-boot-study/target/classes started by zhaohuan in /Users/zhaohuan/webapp/spring-boot-study)
+2019-12-09 00:06:46.801 [restartedMain] INFO  c.z.s.ansyc.SpringbootApplication -No active profile set, falling back to default profiles: default
+2019-12-09 00:06:46.963 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor -Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-09 00:06:46.963 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor -For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-09 00:06:47.565 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner -No MyBatis mapper was found in '[com.zhao.springboot.ansyc]' package. Please check your configuration.
+2019-12-09 00:06:47.618 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-09 00:06:47.618 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-09 00:06:47.628 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 4ms. Found 0 repository interfaces.
+2019-12-09 00:06:47.644 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-09 00:06:47.645 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-09 00:06:47.654 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 1ms. Found 0 repository interfaces.
+2019-12-09 00:06:47.926 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$78f466e1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-09 00:06:48.000 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b288a8b3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-09 00:06:48.428 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat initialized with port(s): 8080 (http)
+2019-12-09 00:06:48.442 [restartedMain] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+2019-12-09 00:06:48.442 [restartedMain] INFO  o.a.catalina.core.StandardEngine -Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-12-09 00:06:48.446 [restartedMain] INFO  o.a.c.core.AprLifecycleListener -The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/zhaohuan/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-12-09 00:06:48.615 [restartedMain] INFO  org.apache.jasper.servlet.TldScanner -At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-12-09 00:06:48.616 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2019-12-09 00:06:48.617 [restartedMain] INFO  o.s.web.context.ContextLoader -Root WebApplicationContext: initialization completed in 1654 ms
+2019-12-09 00:06:48.696 [restartedMain] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure -Init DruidDataSource
+2019-12-09 00:06:48.806 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext -Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/DruidDataSourceAutoConfigure.class]: Invocation of init method failed; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2019-12-09 00:06:48.808 [restartedMain] INFO  o.a.catalina.core.StandardService -Stopping service [Tomcat]
+2019-12-09 00:06:48.822 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener -
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-09 00:06:48.826 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter -
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2019-12-09 00:07:38.972 [restartedMain] INFO  c.z.s.ansyc.SpringbootApplication -Starting SpringbootApplication on zhaohuandeMacBook-Pro.local with PID 18471 (/Users/zhaohuan/webapp/spring-boot-study/target/classes started by zhaohuan in /Users/zhaohuan/webapp/spring-boot-study)
+2019-12-09 00:07:39.044 [restartedMain] INFO  c.z.s.ansyc.SpringbootApplication -No active profile set, falling back to default profiles: default
+2019-12-09 00:07:39.345 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor -Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-09 00:07:39.345 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor -For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-09 00:07:39.827 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner -No MyBatis mapper was found in '[com.zhao.springboot.ansyc]' package. Please check your configuration.
+2019-12-09 00:07:39.869 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-09 00:07:39.870 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-09 00:07:39.879 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 4ms. Found 0 repository interfaces.
+2019-12-09 00:07:39.887 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-09 00:07:39.888 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-09 00:07:39.894 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 1ms. Found 0 repository interfaces.
+2019-12-09 00:07:40.156 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$52533a59] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-09 00:07:40.219 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8be77c2b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-09 00:07:40.516 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat initialized with port(s): 8080 (http)
+2019-12-09 00:07:40.529 [restartedMain] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+2019-12-09 00:07:40.529 [restartedMain] INFO  o.a.catalina.core.StandardEngine -Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-12-09 00:07:40.533 [restartedMain] INFO  o.a.c.core.AprLifecycleListener -The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/zhaohuan/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-12-09 00:07:40.693 [restartedMain] INFO  org.apache.jasper.servlet.TldScanner -At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-12-09 00:07:40.695 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2019-12-09 00:07:40.695 [restartedMain] INFO  o.s.web.context.ContextLoader -Root WebApplicationContext: initialization completed in 1350 ms
+2019-12-09 00:07:40.758 [restartedMain] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure -Init DruidDataSource
+2019-12-09 00:07:40.865 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext -Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/DruidDataSourceAutoConfigure.class]: Invocation of init method failed; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2019-12-09 00:07:40.866 [restartedMain] INFO  o.a.catalina.core.StandardService -Stopping service [Tomcat]
+2019-12-09 00:07:40.880 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener -
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-09 00:07:40.884 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter -
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2019-12-09 00:08:17.688 [restartedMain] INFO  c.z.s.ansyc.SpringbootApplication -Starting SpringbootApplication on zhaohuandeMacBook-Pro.local with PID 18479 (/Users/zhaohuan/webapp/spring-boot-study/target/classes started by zhaohuan in /Users/zhaohuan/webapp/spring-boot-study)
+2019-12-09 00:08:17.692 [restartedMain] INFO  c.z.s.ansyc.SpringbootApplication -No active profile set, falling back to default profiles: default
+2019-12-09 00:08:17.819 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor -Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-09 00:08:17.819 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor -For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-09 00:08:18.258 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner -No MyBatis mapper was found in '[com.zhao.springboot.ansyc]' package. Please check your configuration.
+2019-12-09 00:08:18.298 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-09 00:08:18.298 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-09 00:08:18.305 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 3ms. Found 0 repository interfaces.
+2019-12-09 00:08:18.313 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-09 00:08:18.314 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-09 00:08:18.320 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 1ms. Found 0 repository interfaces.
+2019-12-09 00:08:18.535 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$9b046f61] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-09 00:08:18.606 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d498b133] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-09 00:08:18.952 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat initialized with port(s): 8080 (http)
+2019-12-09 00:08:18.973 [restartedMain] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+2019-12-09 00:08:18.974 [restartedMain] INFO  o.a.catalina.core.StandardEngine -Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-12-09 00:08:18.982 [restartedMain] INFO  o.a.c.core.AprLifecycleListener -The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/zhaohuan/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-12-09 00:08:19.147 [restartedMain] INFO  org.apache.jasper.servlet.TldScanner -At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-12-09 00:08:19.149 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2019-12-09 00:08:19.149 [restartedMain] INFO  o.s.web.context.ContextLoader -Root WebApplicationContext: initialization completed in 1330 ms
+2019-12-09 00:08:19.218 [restartedMain] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure -Init DruidDataSource
+2019-12-09 00:08:19.313 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext -Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/DruidDataSourceAutoConfigure.class]: Invocation of init method failed; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2019-12-09 00:08:19.315 [restartedMain] INFO  o.a.catalina.core.StandardService -Stopping service [Tomcat]
+2019-12-09 00:08:19.329 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener -
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-09 00:08:19.334 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter -
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2019-12-09 00:08:44.909 [restartedMain] INFO  c.z.s.ansyc.SpringbootApplication -Starting SpringbootApplication on zhaohuandeMacBook-Pro.local with PID 18486 (/Users/zhaohuan/webapp/spring-boot-study/target/classes started by zhaohuan in /Users/zhaohuan/webapp/spring-boot-study)
+2019-12-09 00:08:44.912 [restartedMain] INFO  c.z.s.ansyc.SpringbootApplication -No active profile set, falling back to default profiles: default
+2019-12-09 00:08:45.062 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor -Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-09 00:08:45.062 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor -For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-09 00:08:45.734 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner -No MyBatis mapper was found in '[com.zhao.springboot.ansyc]' package. Please check your configuration.
+2019-12-09 00:08:45.804 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-09 00:08:45.804 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-09 00:08:45.814 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 4ms. Found 0 repository interfaces.
+2019-12-09 00:08:45.822 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-09 00:08:45.823 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-09 00:08:45.829 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 1ms. Found 0 repository interfaces.
+2019-12-09 00:08:46.057 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$40139793] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-09 00:08:46.129 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$79a7d965] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-09 00:08:46.624 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat initialized with port(s): 8080 (http)
+2019-12-09 00:08:46.666 [restartedMain] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+2019-12-09 00:08:46.667 [restartedMain] INFO  o.a.catalina.core.StandardEngine -Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-12-09 00:08:46.682 [restartedMain] INFO  o.a.c.core.AprLifecycleListener -The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/zhaohuan/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-12-09 00:08:46.962 [restartedMain] INFO  org.apache.jasper.servlet.TldScanner -At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-12-09 00:08:46.964 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2019-12-09 00:08:46.964 [restartedMain] INFO  o.s.web.context.ContextLoader -Root WebApplicationContext: initialization completed in 1902 ms
+2019-12-09 00:08:47.020 [restartedMain] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure -Init DruidDataSource
+2019-12-09 00:08:47.100 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext -Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/DruidDataSourceAutoConfigure.class]: Invocation of init method failed; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2019-12-09 00:08:47.101 [restartedMain] INFO  o.a.catalina.core.StandardService -Stopping service [Tomcat]
+2019-12-09 00:08:47.115 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener -
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-09 00:08:47.119 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter -
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2019-12-09 00:09:42.325 [restartedMain] INFO  c.z.s.ansyc.SpringbootApplication -Starting SpringbootApplication on zhaohuandeMacBook-Pro.local with PID 18511 (/Users/zhaohuan/webapp/spring-boot-study/target/classes started by zhaohuan in /Users/zhaohuan/webapp/spring-boot-study)
+2019-12-09 00:09:42.351 [restartedMain] INFO  c.z.s.ansyc.SpringbootApplication -No active profile set, falling back to default profiles: default
+2019-12-09 00:09:42.510 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor -Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-09 00:09:42.510 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor -For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-09 00:09:43.116 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner -No MyBatis mapper was found in '[com.zhao.springboot.ansyc]' package. Please check your configuration.
+2019-12-09 00:09:43.193 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-09 00:09:43.194 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-09 00:09:43.209 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 6ms. Found 0 repository interfaces.
+2019-12-09 00:09:43.220 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-09 00:09:43.222 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-09 00:09:43.229 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 1ms. Found 0 repository interfaces.
+2019-12-09 00:09:43.447 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$1ac78dc6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-09 00:09:43.492 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$545bcf98] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-09 00:09:43.827 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat initialized with port(s): 8080 (http)
+2019-12-09 00:09:43.840 [restartedMain] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+2019-12-09 00:09:43.840 [restartedMain] INFO  o.a.catalina.core.StandardEngine -Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-12-09 00:09:43.844 [restartedMain] INFO  o.a.c.core.AprLifecycleListener -The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/zhaohuan/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-12-09 00:09:44.003 [restartedMain] INFO  org.apache.jasper.servlet.TldScanner -At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-12-09 00:09:44.005 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2019-12-09 00:09:44.005 [restartedMain] INFO  o.s.web.context.ContextLoader -Root WebApplicationContext: initialization completed in 1494 ms
+2019-12-09 00:09:44.067 [restartedMain] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure -Init DruidDataSource
+2019-12-09 00:09:44.148 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext -Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/DruidDataSourceAutoConfigure.class]: Invocation of init method failed; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2019-12-09 00:09:44.150 [restartedMain] INFO  o.a.catalina.core.StandardService -Stopping service [Tomcat]
+2019-12-09 00:09:44.165 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener -
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-09 00:09:44.169 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter -
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+

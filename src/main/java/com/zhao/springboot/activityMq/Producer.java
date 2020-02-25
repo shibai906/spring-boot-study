@@ -13,7 +13,10 @@ import javax.annotation.Resource;
 import javax.jms.ConnectionFactory;
 import javax.jms.Destination;
 
-@Service
+/**
+ *  activityMq注释掉了
+ */
+// @Service
 public class Producer {
 
     @Resource

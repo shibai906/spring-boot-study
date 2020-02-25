@@ -16,11 +16,11 @@ import org.springframework.transaction.PlatformTransactionManager;
 import javax.sql.DataSource;
 import java.sql.SQLException;
 
-@Data
-@Configuration
-// 前缀为primary.datasource.druid的配置信息
-@ConfigurationProperties(prefix = "test.datasource.druid")
-@MapperScan(basePackages = TestDataBaseConfig.PACKAGE, sqlSessionFactoryRef = "testSqlSessionFactory")
+//@Data
+//@Configuration
+//// 前缀为primary.datasource.druid的配置信息
+//@ConfigurationProperties(prefix = "test.datasource.druid")
+//@MapperScan(basePackages = TestDataBaseConfig.PACKAGE, sqlSessionFactoryRef = "testSqlSessionFactory")
 public class TestDataBaseConfig  {
 
     static final String PACKAGE = "com.zhao.springboot.dao.test" ;

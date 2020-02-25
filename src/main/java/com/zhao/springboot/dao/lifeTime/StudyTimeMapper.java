@@ -1,5 +1,6 @@
 package com.zhao.springboot.dao.lifeTime;
 
+import com.zhao.springboot.entity.lifeTime.StudyTime;
 import org.apache.ibatis.annotations.*;
 
 @Mapper

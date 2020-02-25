@@ -15,10 +15,10 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
 
-@EnableTransactionManagement
-@SpringBootApplication
-@ComponentScan(basePackages={"com.zhao"})
-@EnableCaching
+//@EnableTransactionManagement
+//@SpringBootApplication
+//@ComponentScan(basePackages={"com.zhao"})
+//@EnableCaching
 public class SpringbootApplication extends SpringBootServletInitializer {
 
 

@@ -15,10 +15,10 @@ import org.springframework.transaction.PlatformTransactionManager;
 import javax.sql.DataSource;
 import java.sql.SQLException;
 
-@Data
-@Configuration
-@ConfigurationProperties(prefix = "test3.datasource.druid")
-@MapperScan(basePackages = LifeTimeDataBaseConfig.PACKAGE, sqlSessionFactoryRef = "lifeTimeSqlSessionFactory")
+//@Data
+//@Configuration
+//@ConfigurationProperties(prefix = "test3.datasource.druid")
+//@MapperScan(basePackages = LifeTimeDataBaseConfig.PACKAGE, sqlSessionFactoryRef = "lifeTimeSqlSessionFactory")
 public class LifeTimeDataBaseConfig {
 
     static final String PACKAGE = "com.zhao.springboot.dao.lifeTime";

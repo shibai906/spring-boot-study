@@ -17,10 +17,10 @@ import org.springframework.transaction.PlatformTransactionManager;
 import javax.sql.DataSource;
 import java.sql.SQLException;
 
-@Data
-@Configuration
-@ConfigurationProperties(prefix = "tests.datasource.druid")
-@MapperScan(basePackages = MealCardDataBaseConfig.PACKAGE, sqlSessionFactoryRef = "meadlCardSqlSessionFactory")
+//@Data
+//@Configuration
+//@ConfigurationProperties(prefix = "tests.datasource.druid")
+//@MapperScan(basePackages = MealCardDataBaseConfig.PACKAGE, sqlSessionFactoryRef = "meadlCardSqlSessionFactory")
 public class MealCardDataBaseConfig {
 
     static final String PACKAGE = "com.zhao.springboot.dao.mealCard" ;
